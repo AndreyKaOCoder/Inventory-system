@@ -3,6 +3,7 @@ from handlers.inventorization_commands import inv_book
 
 def kb_inventory():
     builder = ReplyKeyboardBuilder()
+    builder.button(text = "📊 Общая статистика")
     for item in inv_book.sheetnames:
         builder.button(text = item)
     builder.adjust(3)
