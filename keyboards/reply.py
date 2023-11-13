@@ -10,6 +10,9 @@ main = ReplyKeyboardMarkup (
         ],
         [
             KeyboardButton(text = "🧾 Инвентаризация")
+        ],
+        [
+            KeyboardButton(text = "📱 Информация о сайте")
         ]
     ],
     resize_keyboard = True,
