@@ -8,9 +8,10 @@ from aiogram.fsm.context import FSMContext
 
 from keyboards import reply, inline
 from utils.states import Search
+from config_reader import config
 
 router = Router()
-inv_book = openpyxl.load_workbook(filename = "data/Inventarization.xlsx", data_only = True)
+inv_book = openpyxl.load_workbook(filename = f"data/{config.namefile.get_secret_value()}.xlsx", data_only = True)
 
 for item in inv_book.sheetnames:
     @router.message(F.text == item)
